@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { getUser } from '../../ducks/reducer'
+import { connect } from 'react-redux';
+import { getUser } from '../../ducks/reducer';
+import './Dashboard.css';
 
 class Private extends Component {
     constructor(props){
@@ -25,7 +26,7 @@ class Private extends Component {
                 <p>Email: { this.props.user ? this.props.user.email : null }</p>
                 
                 <a href='http://localhost:3535/auth/logout'><button>Log out</button></a>
-            </div> 
+                </div>
         );
     }
 }
