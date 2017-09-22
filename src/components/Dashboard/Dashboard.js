@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { getUser } from '../../ducks/reducer'
+import { connect } from 'react-redux';
+import { getUser } from '../../ducks/reducer';
+import './Dashboard.css';
 
 class Private extends Component {
     constructor(props){
@@ -17,10 +18,15 @@ class Private extends Component {
     render() {
         return (
             <div className=''>
-                IS IT WORKING???
-                <a href='http://localhost:3535/auth/logout'><div>Logout</div></a>
-            </div> 
-            
+                <h1>Profile</h1><hr />
+                <h4>Account information:</h4>
+                { this.props.user ? <img className='avatar' src={this.props.user.picture} /> : null }
+                <p>Firstname: { this.props.user ? this.props.user.firstname : null }</p>
+                <p>Lastname: { this.props.user ? this.props.user.lastname : null }</p>
+                <p>Email: { this.props.user ? this.props.user.email : null }</p>
+                
+                <a href='http://localhost:3535/auth/logout'><button>Log out</button></a>
+                </div>
         );
     }
 }
