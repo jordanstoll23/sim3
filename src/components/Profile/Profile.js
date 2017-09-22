@@ -19,7 +19,7 @@ class Profile extends Component {
 
 function mapStateToProps(state){
     return {
-        jordan: state.jordan
+        user: state.user
     }
 }
 
