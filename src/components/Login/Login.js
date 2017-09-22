@@ -6,7 +6,7 @@ import logo from './../../assets/logo.png';
 class Login extends Component{
     render(){
         return(
-            <div className="App">
+            <div className="App1">
             <div className='splashScreen'>
         <img src={logo} alt={logo} className="Auth__logo_img"/>
           <div className="helo">Helo</div>
