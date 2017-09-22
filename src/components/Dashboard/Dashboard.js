@@ -19,7 +19,7 @@ class Dashboard extends Component {
 
 function mapStateToProps(state){
     return {
-        trevor: state.trevor
+        jordan: state.jordan
     }
 }
 

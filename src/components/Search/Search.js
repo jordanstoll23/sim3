@@ -19,7 +19,7 @@ class Search extends Component {
 
 function mapStateToProps(state){
     return {
-        trevor: state.trevor
+        jordan: state.jordan
     }
 }
 
