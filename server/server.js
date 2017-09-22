@@ -63,5 +63,13 @@ app.get('/auth/callback', passport.authenticate('auth0',{
     failureRedirect: '/auth'
 }));
 
+
+app.get('/auth/logout', (req,res) => {
+    req.logOut();
+    res.redirect(302, 'http://localhost:3000')
+});
+
+
+
 const PORT = 3535;
 app.listen(PORT, () => console.log(`listening on port:`, PORT));
