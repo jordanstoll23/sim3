@@ -20,7 +20,6 @@ class Dashboard extends Component {
 
     render() {
         return (
-        <div>
             <div className='DashHome'>
                 <div className="HeaderParent">
                     <div className="HeaderChild">
@@ -87,16 +86,7 @@ class Dashboard extends Component {
 
                 </div>
             </div> 
-            // <div className=''>
-            //     <h1>Profile</h1>
-            //     <h4>Account information:</h4>
-            //     { this.props.user ? <img className='avatar' src={this.props.user.picture} /> : null }
-            //     <p>Firstname: { this.props.user ? this.props.user.firstname : null }</p>
-            //     <p>Lastname: { this.props.user ? this.props.user.lastname : null }</p>
-            //     <p>Email: { this.props.user ? this.props.user.email : null }</p>
-                
-            //     <a href='http://localhost:3535/auth/logout'><button>Log out</button></a>
-            //     </div>
+
         );
     }
 }
