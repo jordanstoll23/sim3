@@ -5,6 +5,7 @@ import './Dashboard.css';
 import home from "../../assets/home.png";
 import search from"../../assets/search.png";
 import robohash from "../../assets/robohash.png";
+import {Link} from 'react-router-dom';
 
 class Dashboard extends Component {
     constructor(props){
@@ -46,7 +47,7 @@ class Dashboard extends Component {
                                 <div className="User_right">
                                     <span classname="User__first_name"></span>
                                     <span className="User__last_name"></span>
-                                    <a href="/profile"><button class="User__btn_edit">Edit Profile</button></a>
+                                    <Link to="/profile"><button class="User__btn_edit">Edit Profile</button></Link>
                                 </div>
                                 <div className="Dashboard__onboarding">
                                     <div className="Dashboard__onboarding-content-container">
