@@ -8,9 +8,9 @@
 }
 
 .splashScreen{
-  margin-top: 25vh;
- height:40vh;
- width:30%;
+  
+  width: 496px;
+  height: 392px;
  border-radius: 8px;
  background-image: linear-gradient(128deg, rgba(64,61,57,0.1), rgba(255,255,255,0.2));
  box-shadow: 0 14px 28px 0 rgba(0,0,0,0.25), 0 10px 10px 0 rgba(0,0,0,0.26);
@@ -18,14 +18,15 @@
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ 
 }
 
 .loginButton{
-  border-radius:1px;
-  background-image: radial-gradient(circle at 50%-46%,#737373,#403d39);
+  border-radius:3px;
+  background-color: #403d39;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1) 0 1px 2px 0 rgba(0,0,0,0.2);
   width:275px;
-  height:5vh;
+  height:45px;
   color:white;
   margin-top: 1vh;
   display: flex;
@@ -33,6 +34,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  font-size: 20px;
 }
 
 .text {
@@ -44,11 +46,12 @@
   color:white;
   font-size:80px;
   font-weight: 900;
+  
 }
 
-.logo{
-  background-image:url("./assets/logo.png");
-  height:14.2vh;
-  width:114px;
+.Auth__logo_img{
+  width: 120px;
+  margin-top: 34px;
+
 }
 
