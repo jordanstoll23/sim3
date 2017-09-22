@@ -15,9 +15,10 @@ class Dashboard extends Component {
         }
     }
 
-    // componentDidMount(){
-    //     this.props.getUser()
-    // }
+    componentDidMount(){
+        this.props.getUser()
+        console.log(this.props)
+    }
 
     render() {
         return (

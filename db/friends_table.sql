@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS friends (
     hobby TEXT,
     day TEXT,
     month TEXT,
-    year TEXT
+    year TEXT,
+    auth_id TEXT
 )
+
 
