@@ -18,7 +18,9 @@ class Private extends Component {
         return (
             <div className=''>
                 IS IT WORKING???
+                <a href='http://localhost:3535/auth/logout'><div>Logout</div></a>
             </div> 
+            
         );
     }
 }
