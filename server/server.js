@@ -18,37 +18,41 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-massive(process.env.CONNECTION_STRING).then(db => {app.set('db', db);
+massive(process.env.CONNECTION_STRING).then(db => {
+    app.set('db', db);
 }).catch(err => console.log(fail));
 
 passport.use( new Auth0Strategy({
-    domain: process.env.AUTH_DOMAIN,
-    clientID: process.env.AUTH_CLIENT_ID,
-    clientSecret: process.env.AUTH_CLIENT_SECRET,
-    callbackURL: process.env.AUTH_CALLBACK
-}, function(accessToken, refreshToken, extraParams, profile, done) {
-    db.get_user([profile.identities[0].user_id]).then( user => {
-        if(user[0]) {
-            done(null, user[0].id);
-        // } else {
-        //     db.create_user([profile.displayName, profile.emails[0].value, profile.picture, profile.identities[0].user_id ])
-        //     .then(user => {
-        //         done(null, user[0].id);
-        //     }) 
-         }
-         // console.log('res', res)
-     })
-}))
-
-passport.serializeUser(function(userId, done) {
-    done(null, userId);
+        domain: process.env.AUTH_DOMAIN,
+        clientID: process.env.AUTH_CLIENT_ID,
+        clientSecret: process.env.AUTH_CLIENT_SECRET,
+        callbackURL: process.env.AUTH_CALLBACK
+    }, function(accessToken, refreshToken, extraParams, profile, done) {
+        const db = app.get('db')
+        db.get_user([profile.identities[0].user_id]).then( user => {
+            if(user[0]) {
+                done(null, user[0].id);
+            }
+        })
+    })
+)
+passport.serializeUser(function(user, done) {
+    done(null, user);
 })
 
 passport.deserializeUser( function(user, done) {
     app.get('db').current_friend(userId).then( user => {
-        done(null, user[0]);
+        done(null, user);
     })
         
+})
+
+app.get('/auth/user', (req, res, next) => {
+    if(!req.user) {
+        return res.status(404).send('User not found');
+    } else {
+        return res.status(200).send(req.user);
+    }
 })
 
 app.get('/auth', passport.authenticate('auth0'));

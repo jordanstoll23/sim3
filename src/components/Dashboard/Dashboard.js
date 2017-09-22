@@ -5,7 +5,7 @@ import './Dashboard.css';
 import home from "../../assets/home.png";
 import search from"../../assets/search.png";
 
-class Private extends Component {
+class Dashboard extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -69,4 +69,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{ getUser })(Private)
+export default connect(mapStateToProps,{ getUser })(Dashboard)
