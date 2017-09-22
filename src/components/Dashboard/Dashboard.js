@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getUser } from '../../ducks/reducer';
 import './Dashboard.css';
 
-class Private extends Component {
+class Dashboard extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -37,4 +37,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{ getUser })(Private)
+export default connect(mapStateToProps,{ getUser })(Dashboard)
