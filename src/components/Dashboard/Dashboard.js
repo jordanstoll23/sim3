@@ -18,7 +18,7 @@ class Private extends Component {
     render() {
         return (
             <div className=''>
-                <h1>Profile</h1><hr />
+                <h1>Profile</h1>
                 <h4>Account information:</h4>
                 { this.props.user ? <img className='avatar' src={this.props.user.picture} /> : null }
                 <p>Firstname: { this.props.user ? this.props.user.firstname : null }</p>
