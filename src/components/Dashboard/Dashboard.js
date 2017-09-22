@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getUser } from '../../ducks/reducer';
 import './Dashboard.css';
 import home from "../../assets/home.png";
 import search from"../../assets/search.png";
@@ -8,14 +7,12 @@ import search from"../../assets/search.png";
 class Dashboard extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            user: {}
-        }
+        
     }
 
-    componentDidMount(){
-        this.props.getUser()
-    }
+    // componentDidMount(){
+    //     this.props.getProfile()
+    // }
 
     render() {
         return (
@@ -69,4 +66,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{ getUser })(Dashboard)
+export default connect(mapStateToProps)(Dashboard)

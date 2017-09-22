@@ -1,3 +1,3 @@
 SELECT *
 FROM friends
-WHERE authid = $1
+WHERE auth = $1
