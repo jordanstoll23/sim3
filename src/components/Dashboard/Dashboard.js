@@ -4,6 +4,8 @@ import { getUser } from '../../ducks/reducer';
 import './Dashboard.css';
 import home from "../../assets/home.png";
 import search from"../../assets/search.png";
+import robohash from "../../assets/robohash.png";
+import {Link} from 'react-router-dom';
 
 class Dashboard extends Component {
     constructor(props){
@@ -20,7 +22,7 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div><div className='DashHome'>
+            <div className='DashHome'>
                 <div className="HeaderParent">
                     <div className="HeaderChild">
                         <div className="Child1">
@@ -32,7 +34,7 @@ class Dashboard extends Component {
                             <span className="Header_page">Dashboard</span>
                         </div>
                         <div className="Child3">
-                            <span className="Header_logout">Logout</span>
+                        <a href='http://localhost:3535/auth/logout'><span className="Header_logout">Logout</span></a>
                             </div>
                     </div>
                 </div>
@@ -40,9 +42,45 @@ class Dashboard extends Component {
                     <div className="Dash_child_conatiner">
                         <div className="Dash_child_top">
                             <div className="User_container">
-                                <div className="User_left"></div>
+                                <div className="User_left">
+                                    <img src={robohash} className="User_image"/>
+                                </div>
+                                <div className="User_right">
+                                    <span classname="User__first_name"></span>
+                                    <span className="User__last_name"></span>
+                                    <Link to="/profile"><button class="User__btn_edit">Edit Profile</button></Link>
+                                </div>
+                                <div className="Dashboard__onboarding">
+                                    <div className="Dashboard__onboarding-content-container">
+                                        <span className="open-sans">Welcome to Helo! Find recommended friends based 
+                                        on your similarities, and even search for them by name. 
+                                        The more you update your profile, the better recommendations we can make!
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        <div className="Dashboard_recommended_parent">
+                            <div className="Dashboard__recommended_child">
+                                <div className="Dashboard__recommended_child-content-container">
+                                <div className="Dashboard__recommended_header">
+                                    <span className="Dashboard__recommended_header_span"> Recommended Friends </span>
+                                    <span className="Dashboard__recommended_select_span"> Sorted by </span>
+                                    <select className="Dashboard__recommended_select">
+                                        <option value="first"> First Name </option>
+                                        <option value="last"> Last Name </option>
+                                        <option value="gender"> Gender </option>
+                                        <option value="hobby"> Hobby </option>
+                                        <option value="h_color"> Hair Color </option>
+                                        <option value="e_color"> Eye Color </option>
+                                        <option value="birthday"> Birthday </option>
+                                    </select>
+                                </div>
+                               
+                                </div>
 
                             </div>
+
+                        </div>
 
                         </div>
 
@@ -50,17 +88,7 @@ class Dashboard extends Component {
 
                 </div>
             </div> 
-            <div className=''>
-                <h1>Profile</h1>
-                <h4>Account information:</h4>
-                { this.props.user ? <img className='avatar' src={this.props.user.picture} /> : null }
-                <p>Firstname: { this.props.user ? this.props.user.firstname : null }</p>
-                <p>Lastname: { this.props.user ? this.props.user.lastname : null }</p>
-                <p>Email: { this.props.user ? this.props.user.email : null }</p>
-                
-                <a href='http://localhost:3535/auth/logout'><button>Log out</button></a>
-                </div>
-                </div>
+
         );
     }
 }
