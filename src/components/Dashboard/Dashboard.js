@@ -48,9 +48,9 @@ class Dashboard extends Component {
                                     <span className="User__last_name"></span>
                                     <a href="/profile"><button class="User__btn_edit">Edit Profile</button></a>
                                 </div>
-                                <div class="Dashboard__onboarding">
+                                <div className="Dashboard__onboarding">
                                     <div className="Dashboard__onboarding-content-container">
-                                        <span class="open-sans">Welcome to Helo! Find recommended friends based 
+                                        <span className="open-sans">Welcome to Helo! Find recommended friends based 
                                         on your similarities, and even search for them by name. 
                                         The more you update your profile, the better recommendations we can make!
                                         </span>
@@ -60,10 +60,10 @@ class Dashboard extends Component {
                         <div className="Dashboard_recommended_parent">
                             <div className="Dashboard__recommended_child">
                                 <div className="Dashboard__recommended_child-content-container">
-                                <div class="Dashboard__recommended_header">
-                                    <span class="Dashboard__recommended_header_span"> Recommended Friends </span>
-                                    <span class="Dashboard__recommended_select_span"> Sorted by </span>
-                                    <select class="Dashboard__recommended_select">
+                                <div className="Dashboard__recommended_header">
+                                    <span className="Dashboard__recommended_header_span"> Recommended Friends </span>
+                                    <span className="Dashboard__recommended_select_span"> Sorted by </span>
+                                    <select className="Dashboard__recommended_select">
                                         <option value="first"> First Name </option>
                                         <option value="last"> Last Name </option>
                                         <option value="gender"> Gender </option>

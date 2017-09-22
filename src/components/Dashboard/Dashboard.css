@@ -106,6 +106,7 @@
 .User_image {
     border: 3px solid #ff9770;
     width: 123px;
+    display: block;
 }
 .User_right {
     width: calc(100% - 150px);
@@ -133,12 +134,29 @@
 .User__btn_edit{
     cursor: auto;
     text-decoration: underline; 
+    height: 35px;
+    border-radius: 1px;
+    background-image: radial-gradient(circle at 50% 0,#fff,#f1eceb);
+    border: 1px solid #ccc3c3;
+    cursor: pointer;
+    font-family: Open Sans,sans-serif;
+    font-weight: 400;
+    width: 150px;
+    font-size: 16px;
 }
 .Dashboard__onboarding-content-container {
     background-color: #fff;
     border-radius: 2px;
     
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 500px;
+    height: 150px;
+    
+    display: flex;
+    margin-left: 20px;
+    
+    box-sizing: border-box;
+    padding: 15px;
 }
 .Dashboard__onboarding {
     width: 500px;
@@ -149,6 +167,10 @@
     
     box-sizing: border-box;
     padding: 15px;
+}
+.open-sans {
+    font-weight: 400;
+    font-family: Open Sans,sans-serif;
 }
 .Dashboard_recommended_parent{
     width: 100%;
@@ -168,6 +190,8 @@
     background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 841px;
+    display: block;
 }
 .Dashboard__recommended_header{
     width: 100%;
