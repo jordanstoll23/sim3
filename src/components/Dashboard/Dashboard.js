@@ -20,6 +20,7 @@ class Dashboard extends Component {
 
     render() {
         return (
+        <div>
             <div className='DashHome'>
                 <div className="HeaderParent">
                     <div className="HeaderChild">
@@ -32,7 +33,7 @@ class Dashboard extends Component {
                             <span className="Header_page">Dashboard</span>
                         </div>
                         <div className="Child3">
-                            <span className="Header_logout">Logout</span>
+                        <a href='http://localhost:3535/auth/logout'><span className="Header_logout">Logout</span></a>
                             </div>
                     </div>
                 </div>
