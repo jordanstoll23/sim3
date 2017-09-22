@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { getUser } from '../../ducks/reducer'
+import { connect } from 'react-redux';
+import { getUser } from '../../ducks/reducer';
+import './Dashboard.css';
 
 class Private extends Component {
     constructor(props){
@@ -16,7 +17,7 @@ class Private extends Component {
 
     render() {
         return (
-            <div className=''>
+            <div className='pizza'>
                 IS IT WORKING???
             </div> 
         );
