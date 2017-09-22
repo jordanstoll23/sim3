@@ -1,5 +1,5 @@
 {
-  "name": "helo",
+  "name": "helo-app",
   "version": "0.1.0",
   "private": true,
   "main": "./server/server.js",

@@ -18,12 +18,8 @@ class Login extends Component{
     }
 }
 
-function mapStateToProps(state){
-    return {
-        jordan: state.jordan
-    }
-}
 
-export default connect(mapStateToProps)(Login)
+
+export default Login;
 
 

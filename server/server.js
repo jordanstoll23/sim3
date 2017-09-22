@@ -29,22 +29,29 @@ passport.use( new Auth0Strategy({
         callbackURL: process.env.AUTH_CALLBACK
     }, function(accessToken, refreshToken, extraParams, profile, done) {
         const db = app.get('db')
+        // console.log('user_id', profile.identities[0].user_id) //helps identify the data structre
         db.get_user([profile.identities[0].user_id]).then( user => {
-            if(user[0]) {
-                done(null, user[0].id);
+           if(user[0]) {
+               done(null, user[0].id);
+           } else {
+               db.create_user([profile.displayName, profile.identities[0].user_id])
+               .then(user => {
+                   done(null, user[0].id);
+               }) 
             }
+            // console.log('res', res)
         })
     })
 )
-passport.serializeUser(function(user, done) {
-    done(null, user);
+passport.serializeUser(function(userId, done) {
+    // console.log('serialize', userId)
+    done(null, userId);    
 })
 
-passport.deserializeUser( function(user, done) {
-    app.get('db').current_friend(userId).then( user => {
-        done(null, user);
+passport.deserializeUser(function(userId, done) {
+    app.get('db').current_user(userId).then( user => {
+        done(null, user[0]);
     })
-        
 })
 
 app.get('/auth/user', (req, res, next) => {
