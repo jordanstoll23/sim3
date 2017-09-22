@@ -19,7 +19,7 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div className='DashHome'>
+            <div><div className='DashHome'>
                 <div className="HeaderParent">
                     <div className="HeaderChild">
                         <div className="Child1">
@@ -58,6 +58,7 @@ class Dashboard extends Component {
                 <p>Email: { this.props.user ? this.props.user.email : null }</p>
                 
                 <a href='http://localhost:3535/auth/logout'><button>Log out</button></a>
+                </div>
                 </div>
         );
     }
