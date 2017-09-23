@@ -71,6 +71,9 @@
     color: #fff;
     font-size: 17px;
     cursor: pointer;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
 }
 .Dashboard_parent{
     width: 100%;
