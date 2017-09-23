@@ -71,9 +71,10 @@ app.get('/auth/callback', passport.authenticate('auth0',{
 }));
 
 
-app.get('/auth/logout', (req,res) => {
-    req.logOut();
-    res.redirect(302, 'http://localhost:3000')
+app.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/');
+    });
 });
 
 

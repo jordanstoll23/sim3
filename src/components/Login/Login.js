@@ -18,14 +18,11 @@ class Login extends Component{
     }
 }
 
-<<<<<<< HEAD
 function mapStateToProps(state){
     return {
         user: state.user
     }
 }
-=======
->>>>>>> 89bdbf215ce869331c4ae0ed5f8160c9231e2e0b
 
 
 export default Login;
