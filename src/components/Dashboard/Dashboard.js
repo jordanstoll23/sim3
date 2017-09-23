@@ -52,9 +52,9 @@ class Dashboard extends Component {
                                 </div>
                                 <div className="Dashboard__onboarding">
                                     <div className="Dashboard__onboarding-content-container">
-                                        <span className="open-sans">Welcome to Helo! Find recommended friends based 
-                                        on your similarities, and even search for them by name. 
-                                        The more you update your profile, the better recommendations we can make!
+                                        <span class="open-sans">Welcome to Helo! Find recommended Todds based 
+                                        on your similarities, and even search for them by Toddness. 
+                                        The more you update your profile, the better Todds we can make!
                                         </span>
                                     </div>
                                 </div>
@@ -99,4 +99,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{ getUser })(Dashboard)
+export default connect(mapStateToProps)(Dashboard)

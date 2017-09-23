@@ -71,7 +71,11 @@ app.get('/auth/callback', passport.authenticate('auth0',{
 }));
 
 
+<<<<<<< HEAD
 app.get('/auth/logout', (req, res) => {
+=======
+app.get('/logout', (req, res) => {
+>>>>>>> 8581e9160837122a9910878ed07aecc51a7b7635
     req.session.destroy(() => {
         res.redirect('/');
     });
